@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ZAS Translation Platform Design System */
+
+@layer base {
+  :root {
+    /* Vibrant gradient colors for translation platform */
+    --background: 220 25% 97%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    /* Primary: Deep blue-purple gradient */
+    --primary: 250 75% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 260 85% 65%;
+
+    /* Secondary: Soft purple */
+    --secondary: 270 60% 96%;
+    --secondary-foreground: 250 75% 45%;
+
+    /* Accent: Vibrant cyan for highlights */
+    --accent: 195 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 220 20% 94%;
+    --muted-foreground: 240 5% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 92%;
+    --ring: 250 75% 58%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(250 75% 58%), hsl(260 85% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(250 75% 58%) 0%, hsl(260 85% 65%) 50%, hsl(195 85% 55%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 25% 97%));
+    
+    /* Shadows with glow */
+    --shadow-elegant: 0 10px 40px -10px hsl(250 75% 58% / 0.25);
+    --shadow-glow: 0 0 60px hsl(260 85% 65% / 0.3);
+    --shadow-card: 0 4px 20px hsl(240 10% 15% / 0.08);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 240 15% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 12% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 12% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 260 85% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 250 75% 58%;
+
+    --secondary: 240 10% 18%;
+    --secondary-foreground: 260 85% 75%;
+
+    --accent: 195 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 5% 65%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 18%;
+    --ring: 260 85% 65%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(260 85% 65%), hsl(250 75% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(260 85% 65%) 0%, hsl(250 75% 58%) 50%, hsl(195 85% 55%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(240 12% 12%), hsl(240 15% 8%));
+
+    --shadow-elegant: 0 10px 40px -10px hsl(260 85% 65% / 0.4);
+    --shadow-glow: 0 0 80px hsl(250 75% 58% / 0.4);
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Tajawal', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  [dir="rtl"] body {
+    font-family: 'Tajawal', 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: var(--shadow-elegant);
+    }
+    to {
+      box-shadow: var(--shadow-glow);
+    }
+  }
+}
