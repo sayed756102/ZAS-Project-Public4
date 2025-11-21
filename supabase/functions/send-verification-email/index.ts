@@ -35,6 +35,7 @@ const handler = async (req: Request): Promise<Response> => {
         html: `
           <div dir="rtl" style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; text-align: right; background-color: #ffffff;">
             <div style="text-align: center; margin-bottom: 30px;">
+              <img src="https://dgxxggjxbhjarswomkjg.supabase.co/storage/v1/object/public/assets/logo.png" alt="ZAS Logo" style="width: 120px; height: auto; margin-bottom: 15px;" />
               <h1 style="color: #2563eb; font-size: 36px; margin: 0; font-weight: bold;">ZAS</h1>
               <p style="color: #64748b; font-size: 14px; margin-top: 5px;">منصة الترجمة الذكية للأكواد البرمجية</p>
             </div>
@@ -62,6 +63,9 @@ const handler = async (req: Request): Promise<Response> => {
             <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 30px 0;">
 
             <div dir="ltr" style="text-align: left;">
+              <div style="text-align: center; margin-bottom: 20px;">
+                <img src="https://dgxxggjxbhjarswomkjg.supabase.co/storage/v1/object/public/assets/logo.png" alt="ZAS Logo" style="width: 120px; height: auto; margin-bottom: 15px;" />
+              </div>
               <div style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); padding: 30px; border-radius: 10px; margin-bottom: 20px;">
                 <h2 style="color: #ffffff; margin: 0 0 15px 0; font-size: 24px;">Welcome!</h2>
                 <p style="color: #ffffff; font-size: 16px; line-height: 1.6; margin: 0;">
@@ -84,8 +88,9 @@ const handler = async (req: Request): Promise<Response> => {
             </div>
 
             <div style="text-align: center; padding-top: 20px; border-top: 2px solid #e2e8f0; margin-top: 30px;">
+              <img src="https://dgxxggjxbhjarswomkjg.supabase.co/storage/v1/object/public/assets/logo.png" alt="ZAS Logo" style="width: 60px; height: auto; margin-bottom: 10px;" />
               <p style="color: #64748b; font-size: 12px; margin: 5px 0;">
-                © 2024 ZAS - منصة الترجمة الذكية
+                © 2025 ZAS - منصة الترجمة الذكية
               </p>
               <p style="color: #94a3b8; font-size: 11px; margin: 5px 0;">
                 Code Translation Platform
